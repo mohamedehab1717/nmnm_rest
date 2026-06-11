@@ -1141,9 +1141,10 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .modal-overlay {
-    align-items: flex-end;
-    padding: 0;
-  }
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
 
   .modal-content {
     max-width: 100%;

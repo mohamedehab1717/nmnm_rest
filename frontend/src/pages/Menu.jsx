@@ -102,6 +102,10 @@ const Menu = () => {
   }, [selectedCategory, searchQuery, filteredItems]);
 
   const openCustomizer = (item) => {
+    window.scrollTo({
+  top: 0,
+  behavior: "smooth",
+});
     setActiveCustomizeItem(item);
     setCustomizerQuantity(1);
     const initialSelections = [];
@@ -158,7 +162,7 @@ const Menu = () => {
   );
 
   return (
-    <div className="animate-fade-in page-container" style={{ minHeight: '80vh' }}>
+    <div style={{ minHeight: '80vh' }}>
       <div className="menu-page-header">
         <span className="eyebrow">nmnm Culinary Portfolio</span>
         <h1>The Menu</h1>
