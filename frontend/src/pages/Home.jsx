@@ -288,7 +288,7 @@ const Home = ({ setActivePage }) => {
             <p style={{ color: 'var(--text-main)', fontSize: '14px', fontStyle: 'italic', marginBottom: '1.5rem' }}>
               &ldquo;The Obsidian Wagyu Burger is hands-down the most luxurious burger I have ever tasted. The black truffle aioli with charcoal bun is culinary genius.&rdquo;
             </p>
-            <span style={{ fontSize: '13px', fontWeight: '600', color: 'var(--text-accent)' }}>- Alexander V.</span>
+            <span style={{ fontSize: '13px', fontWeight: '600', color: 'var(--text-accent)' }}>- Nour M.</span>
           </div>
           <div className="glass-panel" style={{ padding: '2.5rem', textAlign: 'left' }}>
             <div style={{ display: 'flex', gap: '4px', marginBottom: '1rem', color: '#fbbf24' }}>
@@ -297,7 +297,7 @@ const Home = ({ setActivePage }) => {
             <p style={{ color: 'var(--text-main)', fontSize: '14px', fontStyle: 'italic', marginBottom: '1.5rem' }}>
               &ldquo;We booked the VIP booth for our anniversary. The dark purple ambiance and the Lavender Tart were absolutely stunning. Exceptional service!&rdquo;
             </p>
-            <span style={{ fontSize: '13px', fontWeight: '600', color: 'var(--text-accent)' }}>- Genevieve K.</span>
+            <span style={{ fontSize: '13px', fontWeight: '600', color: 'var(--text-accent)' }}>- Mohamed E.</span>
           </div>
         </div>
       </section>
