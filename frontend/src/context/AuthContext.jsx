@@ -2,7 +2,7 @@ import React, { createContext, useState, useEffect, useContext } from 'react';
 
 const AuthContext = createContext();
 
-export const API_BASE = import.meta.env.VITE_API_URL;
+export const API_BASE = "https://nmnm-rest.onrender.com/api";
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
