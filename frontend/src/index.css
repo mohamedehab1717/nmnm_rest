@@ -2,25 +2,31 @@
 
 :root {
   /* Color system */
-  --bg-dark-base: #060309;
-  --bg-dark-surface: #0e0a15;
-  --bg-dark-glass: rgba(14, 10, 21, 0.75);
-  --bg-dark-glass-hover: rgba(22, 16, 32, 0.85);
+  --bg-dark-base: #0a0706;
+  --bg-dark-surface: #14100e;
+  --bg-dark-glass: rgba(20, 16, 14, 0.75);
+  --bg-dark-glass-hover: rgba(28, 22, 19, 0.85);
   
-  --primary-purple: #8b5cf6;
-  --primary-purple-hover: #a78bfa;
-  --primary-purple-dark: #6d28d9;
-  --primary-purple-glow: rgba(139, 92, 246, 0.35);
+  --primary-orange: #ff5e36;
+  --primary-orange-hover: #ff8f70;
+  --primary-orange-dark: #e03e1a;
+  --primary-orange-glow: rgba(255, 94, 54, 0.35);
+
+  /* Compatibility mapping */
+  --primary-purple: var(--primary-orange);
+  --primary-purple-hover: var(--primary-orange-hover);
+  --primary-purple-dark: var(--primary-orange-dark);
+  --primary-purple-glow: var(--primary-orange-glow);
   
   --text-main: #f3f4f6;
   --text-muted: #9ca3af;
-  --text-accent: #c084fc;
+  --text-accent: #fdba74;
   
-  --border-color: rgba(139, 92, 246, 0.15);
-  --border-color-hover: rgba(139, 92, 246, 0.35);
+  --border-color: rgba(255, 94, 54, 0.15);
+  --border-color-hover: rgba(255, 94, 54, 0.35);
   
-  --shadow-glow: 0 0 20px var(--primary-purple-glow);
-  --shadow-glow-strong: 0 0 35px rgba(139, 92, 246, 0.5);
+  --shadow-glow: 0 0 20px var(--primary-orange-glow);
+  --shadow-glow-strong: 0 0 35px rgba(255, 94, 54, 0.5);
   
   --font-serif: 'Cinzel', serif;
   --font-sans: 'Plus Jakarta Sans', sans-serif;
@@ -88,7 +94,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .purple-gradient-text {
-  background: linear-gradient(135deg, #ffffff 30%, #c084fc 100%);
+  background: linear-gradient(135deg, #ffffff 30%, #fdba74 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -139,7 +145,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-secondary:hover {
-  background: rgba(139, 92, 246, 0.1);
+  background: rgba(255, 94, 54, 0.1);
   border-color: var(--primary-purple-hover);
   transform: translateY(-2px);
 }
@@ -264,7 +270,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .form-input:focus {
   border-color: var(--primary-purple);
-  box-shadow: 0 0 10px rgba(139, 92, 246, 0.2);
+  box-shadow: 0 0 10px rgba(255, 94, 54, 0.2);
 }
 
 /* Keyframe animations */
@@ -407,7 +413,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .menu-category-btn:hover {
   color: var(--text-main);
-  background: rgba(139, 92, 246, 0.08);
+  background: rgba(255, 94, 54, 0.08);
 }
 
 .menu-category-btn.active {
@@ -491,7 +497,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .menu-search input:focus {
   border-color: var(--primary-purple);
-  box-shadow: 0 0 12px rgba(139, 92, 246, 0.2);
+  box-shadow: 0 0 12px rgba(255, 94, 54, 0.2);
 }
 
 .menu-search .search-icon {
@@ -573,7 +579,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 11px;
   font-weight: 600;
   color: var(--text-accent);
-  border: 1px solid rgba(139, 92, 246, 0.25);
+  border: 1px solid rgba(255, 94, 54, 0.25);
   letter-spacing: 0.5px;
 }
 
@@ -608,7 +614,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   margin-top: auto;
   padding-top: 0.25rem;
-  border-top: 1px solid rgba(139, 92, 246, 0.08);
+  border-top: 1px solid rgba(255, 94, 54, 0.08);
 }
 
 .menu-card-price {
@@ -667,7 +673,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   text-align: center;
   min-height: 70vh;
-  background-image: radial-gradient(circle at center, rgba(139, 92, 246, 0.15) 0%, transparent 60%);
+  background-image: radial-gradient(circle at center, rgba(255, 94, 54, 0.15) 0%, transparent 60%);
   position: relative;
   margin-bottom: 4rem;
 }
@@ -834,7 +840,7 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   width: 40px;
   height: 40px;
-  border: 3px solid rgba(139, 92, 246, 0.1);
+  border: 3px solid rgba(255, 94, 54, 0.1);
   border-top-color: var(--primary-purple);
   border-radius: 50%;
   animation: spin 1s linear infinite;
@@ -919,7 +925,7 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 1200px;
   margin: 2rem auto 0;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(139, 92, 246, 0.1);
+  border-top: 1px solid rgba(255, 94, 54, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -961,7 +967,7 @@ h1, h2, h3, h4, h5, h6 {
 .admin-tabs {
   display: flex;
   gap: 0.75rem;
-  border-bottom: 1px solid rgba(139, 92, 246, 0.15);
+  border-bottom: 1px solid rgba(255, 94, 54, 0.15);
   padding-bottom: 1rem;
   margin-bottom: 2rem;
   overflow-x: auto;

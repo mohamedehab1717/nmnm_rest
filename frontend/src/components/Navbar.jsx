@@ -106,7 +106,7 @@ const Navbar = ({ activePage, setActivePage, onCartOpen, onAuthOpen }) => {
               padding: '0.5rem 1rem',
               position: 'relative',
               borderRadius: '20px',
-              borderColor: 'rgba(139, 92, 246, 0.4)'
+              borderColor: 'rgba(255, 94, 54, 0.4)'
             }}
           >
             <ShoppingCart size={18} />

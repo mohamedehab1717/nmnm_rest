@@ -69,7 +69,7 @@ const Orders = () => {
             display: 'inline-block',
             width: '32px',
             height: '32px',
-            border: '3px solid rgba(139, 92, 246, 0.1)',
+            border: '3px solid rgba(255, 94, 54, 0.1)',
             borderTopColor: 'var(--primary-purple)',
             borderRadius: '50%',
             animation: 'spin 1s linear infinite'
@@ -99,7 +99,7 @@ const Orders = () => {
                     display: 'flex',
                     justifyContent: 'space-between',
                     alignItems: 'center',
-                    borderBottom: '1px solid rgba(139,92,246,0.1)',
+                    borderBottom: '1px solid rgba(255, 94, 54, 0.1)',
                     paddingBottom: '1rem',
                     marginBottom: '1.5rem',
                     flexWrap: 'wrap',
@@ -272,7 +272,7 @@ const Orders = () => {
                           {order.deliveryAddress.street}, {order.deliveryAddress.city}
                         </p>
                       ) : (
-                        <p style={{ fontSize: '13px', color: 'var(--text-muted)' }}>Pick up from Amethyst District lounge</p>
+                        <p style={{ fontSize: '13px', color: 'var(--text-muted)' }}>Pick up from Saffron District lounge</p>
                       )}
                       {order.deliveryAddress?.phone && (
                         <p style={{ fontSize: '13px', color: 'var(--text-muted)', marginTop: '2px' }}>

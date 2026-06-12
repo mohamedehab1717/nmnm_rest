@@ -253,7 +253,7 @@ const Menu = () => {
               <Minus size={20} />
             </button>
 
-            <div style={{ display: 'flex', gap: '1rem', marginBottom: '1.5rem', borderBottom: '1px solid rgba(139,92,246,0.1)', paddingBottom: '1rem' }}>
+            <div style={{ display: 'flex', gap: '1rem', marginBottom: '1.5rem', borderBottom: '1px solid rgba(255, 94, 54, 0.1)', paddingBottom: '1rem' }}>
               <img
                 src={activeCustomizeItem.image}
                 alt={activeCustomizeItem.name}
@@ -284,7 +284,7 @@ const Menu = () => {
                               alignItems: 'center',
                               justifyContent: 'space-between',
                               padding: '0.5rem 0.75rem',
-                              background: isSelected ? 'rgba(139, 92, 246, 0.1)' : 'rgba(255,255,255,0.02)',
+                              background: isSelected ? 'rgba(255, 94, 54, 0.1)' : 'rgba(255,255,255,0.02)',
                               border: isSelected ? '1px solid var(--primary-purple)' : '1px solid rgba(255,255,255,0.05)',
                               borderRadius: '6px',
                               cursor: 'pointer',
@@ -312,9 +312,9 @@ const Menu = () => {
                 );
               })}
 
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '1rem', borderTop: '1px solid rgba(139,92,246,0.1)' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '1rem', borderTop: '1px solid rgba(255, 94, 54, 0.1)' }}>
                 <span style={{ fontSize: '14px', fontWeight: '600' }}>Quantity</span>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', background: 'rgba(255,255,255,0.03)', borderRadius: '4px', border: '1px solid rgba(139,92,246,0.1)' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', background: 'rgba(255,255,255,0.03)', borderRadius: '4px', border: '1px solid rgba(255, 94, 54, 0.1)' }}>
                   <button onClick={() => setCustomizerQuantity((p) => Math.max(1, p - 1))} style={{ background: 'none', border: 'none', color: 'white', padding: '6px 12px', cursor: 'pointer' }}>
                     <Minus size={14} />
                   </button>

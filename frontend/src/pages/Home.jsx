@@ -182,7 +182,7 @@ const Home = ({ setActivePage }) => {
             <Clock size={32} style={{ color: 'var(--text-accent)', marginBottom: '1.25rem' }} />
             <h3 style={{ fontSize: '20px', marginBottom: '1rem' }}>Luxurious Atmosphere</h3>
             <p style={{ color: 'var(--text-muted)', fontSize: '14px' }}>
-              An elegant design of deep black and neon purple lighting that creates an intimate, ultra-modern dining setting.
+              An elegant design of deep black and warm glowing amber lighting that creates an intimate, ultra-modern dining setting.
             </p>
           </div>
         </div>
@@ -197,7 +197,7 @@ const Home = ({ setActivePage }) => {
             </span>
             <h2 style={{ fontSize: '32px', marginTop: '0.5rem', marginBottom: '1.5rem' }}>Secure Your Table</h2>
             <p style={{ color: 'var(--text-muted)', fontSize: '14px', marginBottom: '1.5rem', lineHeight: '1.8' }}>
-              Due to high demand and exclusive seating arrangements, we highly recommend booking your table in advance. Experience private booths, ambient purple lounge lighting, and exclusive off-menu recommendations by our head chef.
+              Due to high demand and exclusive seating arrangements, we highly recommend booking your table in advance. Experience private booths, ambient glowing orange lounge lighting, and exclusive off-menu recommendations by our head chef.
             </p>
             <p style={{ color: 'var(--text-muted)', fontSize: '13px', fontStyle: 'italic' }}>
               For groups larger than 8 guests, please contact our concierge service directly at +1 (555) 797-8775.
@@ -253,7 +253,7 @@ const Home = ({ setActivePage }) => {
                   <label style={{ fontSize: '11px', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Guests</label>
                   <select value={guestsCount} onChange={(e) => setGuestsCount(e.target.value)} className="form-input" style={{ cursor: 'pointer' }}>
                     {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
-                      <option key={num} value={num} style={{ background: '#0e0a15', color: 'white' }}>
+                      <option key={num} value={num} style={{ background: 'var(--bg-dark-surface)', color: 'white' }}>
                         {num} {num === 1 ? 'Guest' : 'Guests'}
                       </option>
                     ))}
@@ -295,7 +295,7 @@ const Home = ({ setActivePage }) => {
               {[...Array(5)].map((_, i) => <Star key={i} size={16} fill="currentColor" />)}
             </div>
             <p style={{ color: 'var(--text-main)', fontSize: '14px', fontStyle: 'italic', marginBottom: '1.5rem' }}>
-              &ldquo;We booked the VIP booth for our anniversary. The dark purple ambiance and the Lavender Tart were absolutely stunning. Exceptional service!&rdquo;
+              &ldquo;We booked the VIP booth for our anniversary. The warm glowing amber ambiance and the Lavender Tart were absolutely stunning. Exceptional service!&rdquo;
             </p>
             <span style={{ fontSize: '13px', fontWeight: '600', color: 'var(--text-accent)' }}>- Mohamed E.</span>
           </div>

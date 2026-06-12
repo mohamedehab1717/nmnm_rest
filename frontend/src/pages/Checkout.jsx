@@ -24,7 +24,7 @@ const Checkout = ({ setActivePage, onAuthOpen }) => {
   if (cartItems.length === 0 && !orderConfirmed) {
     return (
       <div style={{ textAlign: 'center', padding: '6rem 2rem', minHeight: '60vh' }}>
-        <ShoppingBag size={64} style={{ color: 'var(--primary-purple)', opacity: 0.3, marginBottom: '1.5rem' }} />
+        <ShoppingBag size={64} style={{ color: 'var(--primary-orange)', opacity: 0.3, marginBottom: '1.5rem' }} />
         <h2 style={{ fontSize: '28px', marginBottom: '1rem' }}>Your Cart is Empty</h2>
         <p style={{ color: 'var(--text-muted)', marginBottom: '2rem' }}>Please select some delectable items from our menu first.</p>
         <button onClick={() => setActivePage('menu')} className="btn-primary">
@@ -66,7 +66,7 @@ const Checkout = ({ setActivePage, onAuthOpen }) => {
           totalAmount: cartTotal,
           deliveryType,
           deliveryAddress,
-          paymentMethod: 'Card',
+          paymentMethod: 'Cash',
         }),
       });
 
@@ -99,7 +99,7 @@ const Checkout = ({ setActivePage, onAuthOpen }) => {
           <div
             style={{
               background: 'rgba(255,255,255,0.02)',
-              border: '1px solid rgba(139,92,246,0.1)',
+              border: '1px solid rgba(255, 94, 54, 0.1)',
               borderRadius: '8px',
               padding: '1.25rem',
               textAlign: 'left',
@@ -112,7 +112,7 @@ const Checkout = ({ setActivePage, onAuthOpen }) => {
               <span style={{ color: 'var(--text-main)', fontWeight: '600' }}>{lastOrderDetails?._id}</span>
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '6px' }}>
-              <span style={{ color: 'var(--text-muted)' }}>Amount Paid:</span>
+              <span style={{ color: 'var(--text-muted)' }}>Amount to Pay (Cash):</span>
               <span style={{ color: 'var(--text-accent)', fontWeight: '700' }}>{formatPrice(lastOrderDetails?.totalAmount)}</span>
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -147,8 +147,8 @@ const Checkout = ({ setActivePage, onAuthOpen }) => {
           {!user && (
             <div
               style={{
-                background: 'rgba(139, 92, 246, 0.1)',
-                border: '1px solid rgba(139, 92, 246, 0.2)',
+                background: 'rgba(255, 94, 54, 0.1)',
+                border: '1px solid rgba(255, 94, 54, 0.2)',
                 borderRadius: '8px',
                 padding: '1rem',
                 textAlign: 'center',
@@ -225,7 +225,7 @@ const Checkout = ({ setActivePage, onAuthOpen }) => {
                   <input
                     type="text"
                     required
-                    placeholder="123 Luxury Apt, Purple Avenue"
+                    placeholder="123 Luxury Apt, Saffron Avenue"
                     value={street}
                     onChange={(e) => setStreet(e.target.value)}
                     className="form-input"
@@ -258,54 +258,34 @@ const Checkout = ({ setActivePage, onAuthOpen }) => {
               />
             </div>
 
-            {/* Payment Options mock card */}
-            <div style={{ borderTop: '1px solid rgba(139,92,246,0.1)', paddingTop: '1.5rem' }}>
+            {/* Payment Options (Cash Only) */}
+            <div style={{ borderTop: '1px solid rgba(255, 94, 54, 0.1)', paddingTop: '1.5rem' }}>
               <span style={{ fontSize: '12px', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '1px', display: 'block', marginBottom: '12px' }}>
-                <CreditCard size={14} style={{ verticalAlign: 'middle', marginRight: '4px' }} /> Payment Details (Mock Setup)
+                <CreditCard size={14} style={{ verticalAlign: 'middle', marginRight: '4px' }} /> Payment Method
               </span>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                  <label style={{ fontSize: '11px', color: 'var(--text-muted)' }}>Card Number</label>
-                  <input
-                    type="text"
-                    required
-                    maxLength="19"
-                    placeholder="4000 1234 5678 9010"
-                    value={cardNumber}
-                    onChange={(e) => setCardNumber(e.target.value)}
-                    className="form-input"
-                  />
+              <div 
+                style={{ 
+                  background: 'rgba(255, 255, 255, 0.02)', 
+                  border: '1px solid rgba(255, 94, 54, 0.15)', 
+                  borderRadius: '8px', 
+                  padding: '1.25rem', 
+                  display: 'flex', 
+                  flexDirection: 'column', 
+                  gap: '6px' 
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'var(--primary-orange)' }} />
+                  <span style={{ fontSize: '14px', fontWeight: '700', color: '#ffffff' }}>Cash on Delivery / Pickup</span>
                 </div>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                    <label style={{ fontSize: '11px', color: 'var(--text-muted)' }}>Expiry Date</label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="MM/YY"
-                      value={expiry}
-                      onChange={(e) => setExpiry(e.target.value)}
-                      className="form-input"
-                    />
-                  </div>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                    <label style={{ fontSize: '11px', color: 'var(--text-muted)' }}>CVV</label>
-                    <input
-                      type="password"
-                      required
-                      maxLength="3"
-                      placeholder="•••"
-                      value={cvv}
-                      onChange={(e) => setCvv(e.target.value)}
-                      className="form-input"
-                    />
-                  </div>
-                </div>
+                <p style={{ fontSize: '12px', color: 'var(--text-muted)', lineHeight: '1.5' }}>
+                  Pay with physical cash when your gourmet order is delivered to your door or upon collection at the Saffron District lounge.
+                </p>
               </div>
             </div>
 
-            <button type="submit" disabled={loading} className="btn-primary" style={{ width: '100%', padding: '0.9rem', marginTop: '1rem' }}>
-              {loading ? 'Securing Transaction...' : `Pay & Submit Order (${formatPrice(deliveryType === 'Delivery' ? cartTotal + DELIVERY_FEE_EGP : cartTotal)})`}
+            <button type="submit" disabled={loading} className="btn-primary" style={{ width: '100%', padding: '0.9rem', marginTop: '1.5rem' }}>
+              {loading ? 'Submitting Order...' : `Confirm & Submit Order (${formatPrice(deliveryType === 'Delivery' ? cartTotal + DELIVERY_FEE_EGP : cartTotal)})`}
             </button>
 
           </form>
@@ -314,7 +294,7 @@ const Checkout = ({ setActivePage, onAuthOpen }) => {
         {/* Right Summary Column */}
         <div>
           <div className="glass-panel" style={{ padding: '1.5rem' }}>
-            <h3 style={{ fontSize: '20px', marginBottom: '1.5rem', borderBottom: '1px solid rgba(139,92,246,0.1)', paddingBottom: '0.75rem' }}>
+            <h3 style={{ fontSize: '20px', marginBottom: '1.5rem', borderBottom: '1px solid rgba(255, 94, 54, 0.1)', paddingBottom: '0.75rem' }}>
               Summary of Order
             </h3>
             
@@ -334,7 +314,7 @@ const Checkout = ({ setActivePage, onAuthOpen }) => {
               ))}
             </div>
 
-            <div style={{ borderTop: '1px solid rgba(139,92,246,0.1)', paddingTop: '1.5rem', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <div style={{ borderTop: '1px solid rgba(255, 94, 54, 0.1)', paddingTop: '1.5rem', display: 'flex', flexDirection: 'column', gap: '10px' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '14px', color: 'var(--text-muted)' }}>
                 <span>Subtotal</span>
                 <span>{formatPrice(cartTotal)}</span>

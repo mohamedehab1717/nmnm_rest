@@ -299,7 +299,7 @@ const Admin = () => {
       {/* Main Panels dynamic toggle */}
       {loading ? (
         <div style={{ textAlign: 'center', marginTop: '6rem' }}>
-          <div style={{ display: 'inline-block', width: '32px', height: '32px', border: '3px solid rgba(139, 92, 246, 0.1)', borderTopColor: 'var(--primary-purple)', borderRadius: '50%', animation: 'spin 1s linear infinite' }} />
+          <div style={{ display: 'inline-block', width: '32px', height: '32px', border: '3px solid rgba(255, 94, 54, 0.1)', borderTopColor: 'var(--primary-purple)', borderRadius: '50%', animation: 'spin 1s linear infinite' }} />
         </div>
       ) : (
         <>
@@ -317,7 +317,7 @@ const Admin = () => {
                         borderRadius: '20px',
                         fontSize: '12px',
                         background: orderFilter === filter ? 'var(--primary-purple)' : 'rgba(255,255,255,0.03)',
-                        border: '1px solid rgba(139,92,246,0.2)',
+                        border: '1px solid rgba(255, 94, 54, 0.2)',
                         color: 'white',
                         cursor: 'pointer'
                       }}
@@ -337,7 +337,7 @@ const Admin = () => {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                   {filteredOrders.map((ord) => (
                     <div key={ord._id} className="glass-panel" style={{ padding: '1.5rem' }}>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid rgba(139,92,246,0.1)', paddingBottom: '0.75rem', marginBottom: '1rem', flexWrap: 'wrap', gap: '1rem' }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid rgba(255, 94, 54, 0.1)', paddingBottom: '0.75rem', marginBottom: '1rem', flexWrap: 'wrap', gap: '1rem' }}>
                         <div>
                           <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>ORDER REFERENCE</span>
                           <p style={{ fontSize: '14px', fontWeight: '700' }}>{ord._id}</p>
@@ -352,7 +352,7 @@ const Admin = () => {
                             onChange={(e) => updateOrderStatus(ord._id, e.target.value)}
                             style={{
                               padding: '0.35rem 0.75rem',
-                              background: '#0d0b14',
+                              background: 'var(--bg-dark-surface)',
                               border: '1px solid var(--primary-purple)',
                               borderRadius: '4px',
                               color: 'white',
@@ -446,7 +446,7 @@ const Admin = () => {
                       <select
                         value={formCategory}
                         onChange={(e) => setFormCategory(e.target.value)}
-                        style={{ padding: '0.7rem', background: '#0e0a15', border: '1px solid var(--border-color)', borderRadius: '6px', color: 'white', cursor: 'pointer' }}
+                        style={{ padding: '0.7rem', background: 'var(--bg-dark-surface)', border: '1px solid var(--border-color)', borderRadius: '6px', color: 'white', cursor: 'pointer' }}
                       >
                         {['Burgers', 'Pasta', 'Sandwiches', 'Sweets', 'Beverages', 'Juices', 'Pizza'].map(cat => (
                           <option key={cat} value={cat}>{cat}</option>

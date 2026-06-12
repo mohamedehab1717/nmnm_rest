@@ -55,7 +55,7 @@ const CartPanel = ({ isOpen, onClose, onCheckout }) => {
                   gap: '12px',
                   paddingBottom: '1.25rem',
                   marginBottom: '1.25rem',
-                  borderBottom: '1px solid rgba(139, 92, 246, 0.1)',
+                  borderBottom: '1px solid rgba(255, 94, 54, 0.1)',
                   alignItems: 'flex-start',
                 }}
               >
@@ -72,7 +72,7 @@ const CartPanel = ({ isOpen, onClose, onCheckout }) => {
                     </p>
                   )}
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '8px', flexWrap: 'wrap', gap: '8px' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', background: 'rgba(255,255,255,0.03)', borderRadius: '4px', border: '1px solid rgba(139,92,246,0.1)' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', background: 'rgba(255,255,255,0.03)', borderRadius: '4px', border: '1px solid rgba(255, 94, 54, 0.1)' }}>
                       <button
                         onClick={() => updateQuantity(item.uniqueId, item.quantity - 1)}
                         style={{ background: 'none', border: 'none', color: 'white', padding: '8px 12px', cursor: 'pointer' }}

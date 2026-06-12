@@ -9,21 +9,21 @@ const Logo = ({ className = '', size = 40 }) => {
         viewBox="0 0 100 100"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        style={{ filter: 'drop-shadow(0px 0px 8px rgba(139, 92, 246, 0.6))' }}
+        style={{ filter: 'drop-shadow(0px 0px 8px rgba(255, 94, 54, 0.6))' }}
       >
         {/* Background dark circle */}
-        <circle cx="50" cy="50" r="46" fill="#060309" stroke="#8b5cf6" strokeWidth="3" />
+        <circle cx="50" cy="50" r="46" fill="#0a0706" stroke="#ff5e36" strokeWidth="3" />
         
         {/* Abstract luxury violet curves */}
         <path
           d="M30 30 C 40 45, 45 55, 30 70"
-          stroke="#7c3aed"
+          stroke="#e03e1a"
           strokeWidth="6"
           strokeLinecap="round"
         />
         <path
           d="M70 30 C 60 45, 55 55, 70 70"
-          stroke="#a78bfa"
+          stroke="#ff8f70"
           strokeWidth="6"
           strokeLinecap="round"
         />
@@ -50,7 +50,7 @@ const Logo = ({ className = '', size = 40 }) => {
           fontWeight: '700',
           letterSpacing: '3px',
           color: '#ffffff',
-          textShadow: '0 0 10px rgba(139, 92, 246, 0.4)',
+          textShadow: '0 0 10px rgba(255, 94, 54, 0.4)',
         }}
       >
         nm<span style={{ color: 'var(--text-accent)' }}>nm</span>
